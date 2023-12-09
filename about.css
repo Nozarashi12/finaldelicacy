@@ -18,7 +18,7 @@
     font-size: 50px;
     -webkit-text-stroke: 1px white;
     text-decoration: none;
-    margin-left: 700px;
+    margin-left: 680px;
    margin-bottom:-80px;
 }
 .rest{
@@ -68,3 +68,22 @@
 /* ::-webkit-scrollbar {
     display: none;
 } */
+@media only screen and (max-width: 700px) {
+    .title{
+        font-size: 35px;
+        margin-left: 130px;
+    }
+    .about{
+        font-size:15px ;
+        line-height: 25px;
+        padding-top: 40px;
+
+    }
+    .rest{
+        height: 500px;
+    }
+    .logo1{
+        margin-left:70px ;
+
+    }
+}

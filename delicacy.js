@@ -32,26 +32,23 @@ function getCat() {
     const cat_URL = (`https://www.themealdb.com/api/json/v1/1/filter.php?c=${catname}`);
     fetch(cat_URL)
         .then(res => res.json())
-        .then(data => {
-            document.querySelector(".searchb4").innerHTML =
+        .then(data => { 
+            const shai=document.querySelector(".searchb4").innerHTML =
                 `<h2 class="b4meals">Popular Dishes made with ${catname}</h2>
             <div class="mealimg">
             <img class="meals" src="${data.meals[0].strMealThumb}">
-            <p class="lastp">${data.meals[0].strMeal}</p>
+            <button class="ibutton" onclick="ingredient()"><p class="lastp">${data.meals[0].strMeal} - (recipe)</p></button>
             <img class="meals" src="${data.meals[1].strMealThumb}">
-            <p class="lastp">${data.meals[1].strMeal}</p>
+            <button class="ibutton" onclick="ingredient()"><p class="lastp">${data.meals[1].strMeal} - (recipe)</p></button>
             <img class="meals" src="${data.meals[2].strMealThumb}">
-            <p class="lastp">${data.meals[2].strMeal}</p>
+            <button class="ibutton" onclick="ingredient()"><p class="lastp">${data.meals[2].strMeal} - (recipe)</p></button>
             <img class="meals" src="${data.meals[3].strMealThumb}">
-            <p class="lastp">${data.meals[3].strMeal}</p>
-          </div>`;
-            // console.log(data);
+            <button class="ibutton" onclick="ingredient()"><p class="lastp">${data.meals[3].strMeal} - (recipe)</p></button>
+          </div>`
         })
         .catch(error => {
-            console.log("Error fetching category");
+            console.log(error,"Error fetching category");
         });
-
-
 };
 
 
@@ -63,11 +60,14 @@ function getingredient(){
         return res.json();
     })
     .then(data => {
-    const mealname=document.querySelector(".box").innerHTML=
+    const mealname=document.querySelector(".box")
+    
+    
+    mealname.innerHTML=
     ` <h1>Ingredients</h1>
     <div class="close" onclick="document.querySelector('.box').style.visibility='hidden'">&times;</div>
 </div>
-    <ol>
+    <ul>
     <li> ${data.meals[0].strIngredient1} ${data.meals[0].strMeasure1}</li>
     <li>${data.meals[0].strIngredient2} ${data.meals[0].strMeasure2}</li>
     <li> ${data.meals[0].strIngredient3} ${data.meals[0].strMeasure3}</li>
@@ -78,8 +78,6 @@ function getingredient(){
     <li>${data.meals[0].strIngredient8} ${data.meals[0].strMeasure8}</li>
     <li> ${data.meals[0].strIngredient9} ${data.meals[0].strMeasure9}</li>
     <li>${data.meals[0].strIngredient10} ${data.meals[0].strMeasure10}</li>
-    <li> ${data.meals[0].strIngredient11} ${data.meals[0].strMeasure11}</li>
-    <li>${data.meals[0].strIngredient12} ${data.meals[0].strMeasure12}</li>
      </ol>`    
 })
 }

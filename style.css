@@ -114,21 +114,22 @@
 }
 
 .searchb4 {
+    
     background-color: rgba(218, 218, 218, 0.88);
     height: fit-content;
-
+    
     border: 1px solid black;
    
 }
 
 .mealimg {
     display: flex;
-    justify-content: center;
-    width: 1200px;
-    /* flex-wrap: wrap; */
-    /* border: 1px solid black; */
-    z-index: 1;
-    /* padding-top: 100px; */
+    justify-content: space-around; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+    /* height: 300px;
+    width: 300px; */
+    /* position: absolute; */
 }
 
 .b4meals {
@@ -144,15 +145,19 @@
     margin-top: 90px;
     border-radius: 30px;
     margin-left: 250px;
-    /* border: 1px solid black; */
+    
 }
 
 .lastp {
     text-align: center;
-    margin-top: 360px;
-    margin-left: -160px;
+    margin-top: 370px;
+    margin-left: -250px;
     font-size: large;
     font-style: bold;
+    padding-bottom: 30px;
+}
+.lastp:hover{
+    color: red;
 }
 
 .btn {
@@ -203,7 +208,8 @@
     border: 0;
     outline: none;
 }
-.box ol{
+
+.box ul{
     text-align: center;
     justify-content: center;
     line-height: 17px;
@@ -212,8 +218,117 @@
     margin-top: 20px;
 }
 
+
 @media only screen and (max-width: 700px) {
     body {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
       background-color: rgba(231, 220, 209, 1);
+      height: fit-content;
     }
+   .header{
+    height: 155px;
+    width: 610px;
+   }
+   .title{
+    margin-left: 40px;
+    font-size:20px ;
+    margin-top: 10px;
+   }
+   .p1{
+    display: none;
+   }
+  .search{
+    height: 20px;
+    width: 150px;
+    justify-content: center;
+    padding-left: 33px;
+    margin-top: 30px;
+    margin-left: -200px;
+  }
+  .title2{
+    font-size: 12px;
+    margin-right: 200px;
+    margin-bottom: -60px;
+    
+    /* padding-top: 40px; */
+  }
+  .random{
+   height: 300px;
+   
+  }
+  .recipe{
+    height: 150px;
+    width: 150px;
+    margin-right: 270px;
+    margin-left: -30px;
+    /* margin-top: 180px; */
+  }
+  .b4meals{
+    font-size: 12px;
+
+  }
+  .rname{
+    font-size: 10px;
+    margin-top: -20px;
+    margin-right: 200px;
+  }
+  .mealimg{
+    margin-top: 25px;
+  }
+  .meals{
+    height: 150px;
+    width: 150px;
+  }
+  .lastp{
+    font-size: 12px;
+    margin-top: -80px;
+    /* margin-left: 0px; */
+    /* margin-right: 20px; */
+  }
+  .about{
+    font-size: 15px;
+    margin-left: -0px;
+    margin-right: -40px;
+  }
+  .box{
+    top: 30%;
+    left:1%;
+    position: absolute;
+    height: 225px;
+    width: 125px;
+    font-size: 8px;
+  }
+  .box h1{
+    font-size: 12px;
+    /* margin-top: 20px; */
+  }
+  .box ul{
+    text-align: center;
+    justify-content: center;
+    /* line-height: 17px; */
+    /* width: 200px; */
+    margin-left: 1px;
+    /* margin-right:-0px ; */
+    /* margin-top: 10px; */
+    padding-right: 75px;
+    /* padding-top: -9px; */
+
+}
+.boxheader{
+    font-size: 12px;
+}
+.close{
+    font-size: 10px;
+    margin-left: -0px;
+    margin-right: -80px;
+    margin-top: 0px;
+    margin-bottom: -20px;
+    padding-top: -20px;
+}
+.main{
+    height: fit-content;
+}
+
   }
